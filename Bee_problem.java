@@ -16,7 +16,6 @@ Output Format:
  One line with a number giving the total distance traveled by the beetle accurate to two decimal places. Even if the distance traveled is an integer, the output should have two decimal places
 
 */
-
 import java.util.Scanner;
 public class Main
 {
@@ -48,7 +47,7 @@ public static void main(String[] args) {
 	
 	   for(int i=0; i<N-1; i++)
 	   {
-	      if(co_ordinates[i][0] == co_ordinates[i+1][0] || co_ordinates[i][1] == co_ordinates[i+1][1] || co_ordinates[i][2] == co_ordinates[i+1][2])
+	      if((((co_ordinates[i][0] == co_ordinates[i+1][0]) && (co_ordinates[i][0] == 0) || co_ordinates[i][0] == 10 ))|| (((co_ordinates[i][1] == co_ordinates[i+1][1]) && (co_ordinates[i][1] == 0 || co_ordinates[i][1] == 10))) || ((co_ordinates[i][2] == co_ordinates[i+1][2]) && co_ordinates[i][2] == 10))
 	      {
 	          //moving on same surface
 	          distance = distance + ((Math.PI*2)/6);
